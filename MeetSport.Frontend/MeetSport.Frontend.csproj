@@ -254,6 +254,8 @@
     <Content Include="app\Components\AddTask\AddTaskView.html" />
     <Content Include="app\Components\AddTask\AddTaskViewModel.js" />
     <Content Include="app\Components\ComponentsConfig.js" />
+    <Content Include="app\Components\EventMaking\EventMakingView.html" />
+    <Content Include="app\Components\EventMaking\EventMakingViewModel.js" />
     <Content Include="app\Components\LiveScore\LiveScoreView.html" />
     <Content Include="app\Components\LiveScore\LiveScoreViewModel.js" />
     <Content Include="app\Components\Login\LoginTopMenuView.html" />
@@ -268,6 +270,7 @@
     <Content Include="app\Components\TopMenu\TopMenuView.html" />
     <Content Include="app\Components\TopMenu\TopMenuViewModel.js" />
     <Content Include="app\RoutesConfig.js" />
+    <Content Include="app\Services\SportsService.js" />
     <Content Include="app\Services\TasksService.js" />
     <Content Include="app\Services\UserService.js" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -334,6 +337,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SportsController.cs" />
     <Compile Include="Controllers\TaskController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">

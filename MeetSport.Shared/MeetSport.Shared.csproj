@@ -63,9 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\SportsDTO.cs" />
     <Compile Include="DTOs\TaskDTO.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ISportsRestService.cs" />
     <Compile Include="Services\ITaskRestService.cs" />
     <Compile Include="Validators\TaskValidator.cs" />
   </ItemGroup>

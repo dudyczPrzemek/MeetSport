@@ -98,12 +98,30 @@
   <ItemGroup>
     <Compile Include="Context\ISampleContext.cs" />
     <Compile Include="Context\SampleContext.cs" />
+    <Compile Include="Entities\AddressEntity.cs" />
+    <Compile Include="Entities\EventEntity.cs" />
+    <Compile Include="Entities\EventUsersEntity.cs" />
+    <Compile Include="Entities\RatingEntity.cs" />
+    <Compile Include="Entities\SportEntity.cs" />
     <Compile Include="Entities\TaskEntity.cs" />
+    <Compile Include="Entities\UsersFriendEntity.cs" />
     <Compile Include="Mappings\MappingDefinition.cs" />
+    <Compile Include="Migrations\201512291944107_InitialCreate.cs" />
+    <Compile Include="Migrations\201512291944107_InitialCreate.Designer.cs">
+      <DependentUpon>201512291944107_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512292004379_NewDatabase.cs" />
+    <Compile Include="Migrations\201512292004379_NewDatabase.Designer.cs">
+      <DependentUpon>201512292004379_NewDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\ITaskRepository.cs" />
+    <Compile Include="Repository\Interfaces\ISportsRepository.cs" />
+    <Compile Include="Repository\Interfaces\ITaskRepository.cs" />
+    <Compile Include="Repository\SportsRepository.cs" />
     <Compile Include="Repository\TaskRepository.cs" />
+    <Compile Include="Services\SportsRestService.cs" />
     <Compile Include="Services\TaskRestService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +133,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201512291944107_InitialCreate.resx">
+      <DependentUpon>201512291944107_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512292004379_NewDatabase.resx">
+      <DependentUpon>201512292004379_NewDatabase.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
