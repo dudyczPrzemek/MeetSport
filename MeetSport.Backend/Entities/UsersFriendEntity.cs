@@ -10,9 +10,9 @@ namespace MeetSport.Backend.Entities
 {
     public class UsersFriendEntity : EntityBase
     {
-        public User UserId { get; set; }
+        public string UserName { get; set; }
 
-        public User FriendId { get; set; }
+        public string FriendName { get; set; }
 
         public DateTime FriendshipStartDate { get; set; }
     }

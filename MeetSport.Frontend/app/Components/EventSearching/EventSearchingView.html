@@ -1,0 +1,19 @@
+﻿<div class="row">
+    <div class="box">
+        <div>
+            <label for="sports" style="padding-right:1.5rem;">Dyscyplina</label>
+            <select id="sports" data-bind="options: sports, optionsText: 'Name', value: selectedSport"></select>
+        </div>
+        <div>
+            <label for="cities" style="padding-right:4.5rem;">Miasto</label>
+            <select id="cities" data-bind="options: cities, value: selectedCity"></select>
+        </div>
+        <div>
+            <label for="date" style="padding-right:6rem;">Data</label>
+             <input id="date" type="date" data-bind="value: date" />
+        </div>
+        <div>
+            <button data-bind="click: search">Szukaj</button>
+        </div>
+    </div>
+</div>

@@ -251,11 +251,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\Components\About\AboutView.html" />
+    <Content Include="app\Components\About\AboutViewModel.js" />
     <Content Include="app\Components\AddTask\AddTaskView.html" />
     <Content Include="app\Components\AddTask\AddTaskViewModel.js" />
+    <Content Include="app\Components\Aktualnosci\AktualnosciView.html" />
+    <Content Include="app\Components\Aktualnosci\AktualnosciViewModel.js" />
     <Content Include="app\Components\ComponentsConfig.js" />
+    <Content Include="app\Components\Contact\ContactView.html" />
+    <Content Include="app\Components\Contact\ContactViewModel.js" />
+    <Content Include="app\Components\EventInfo\EventInfoView.html" />
+    <Content Include="app\Components\EventInfo\EventInfoViewModel.js" />
     <Content Include="app\Components\EventMaking\EventMakingView.html" />
     <Content Include="app\Components\EventMaking\EventMakingViewModel.js" />
+    <Content Include="app\Components\EventSearching\EventSearchingView.html" />
+    <Content Include="app\Components\EventSearching\EventSearchingViewModel.js" />
+    <Content Include="app\Components\Greetings\GreetingsView.html" />
+    <Content Include="app\Components\Greetings\GreetingsViewModel.js" />
     <Content Include="app\Components\LiveScore\LiveScoreView.html" />
     <Content Include="app\Components\LiveScore\LiveScoreViewModel.js" />
     <Content Include="app\Components\Login\LoginTopMenuView.html" />
@@ -270,6 +282,7 @@
     <Content Include="app\Components\TopMenu\TopMenuView.html" />
     <Content Include="app\Components\TopMenu\TopMenuViewModel.js" />
     <Content Include="app\RoutesConfig.js" />
+    <Content Include="app\Services\EventService.js" />
     <Content Include="app\Services\SportsService.js" />
     <Content Include="app\Services\TasksService.js" />
     <Content Include="app\Services\UserService.js" />
@@ -277,6 +290,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\business-casual.css" />
     <Content Include="Content\site.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
@@ -300,6 +314,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\GoldenEye\GoldenEye.js" />
     <Content Include="Scripts\GoldenEye\GoldenEye.min.js" />
+    <Content Include="Scripts\GoogleMaps.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -336,6 +351,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SportsController.cs" />
     <Compile Include="Controllers\TaskController.cs" />

@@ -55,6 +55,12 @@ function AuthManager() {
 }
 
 var authManager = new AuthManager();
+
+var isAllowedForNotLoggedUser = function (view)
+{
+    return view === 'Kontakt';
+}
+
 var routing = $.sammy(function () {
     var mappings = [];
 

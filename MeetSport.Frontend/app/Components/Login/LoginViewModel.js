@@ -94,7 +94,7 @@
             userData.Set(data.userName);
             // Cache the access token in session storage.
             authManager.setToken(data.access_token);
-            app.current("TaskList-nc");
+            app.current("Aktualnosci-nc");
         }).fail(function () {
             toastr.error('Błędny login lub hasło.', 'Błąd');
         });

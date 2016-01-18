@@ -10,9 +10,9 @@ namespace MeetSport.Backend.Entities
 {
     public class RatingEntity : EntityBase
     {
-        public User OwnerId { get; set; }
+        public string OwnerName { get; set; }
 
-        public User AuthorId { get; set; }
+        public string AuthorName { get; set; }
 
         public int Rating { get; set; }
 

@@ -10,11 +10,13 @@ namespace MeetSport.Backend.Entities
 {
     public class EventEntity : EntityBase
     {
-        public User FounderId { get; set; }
+        public string FounderName { get; set; }
 
-        public SportEntity SportId { get; set; }
+        public virtual SportEntity Sport { get; set; }
+        public int SportId { get; set; }
 
-        public AddressEntity AddressId { get; set; }
+        public virtual AddressEntity Address { get; set; }
+        public int AddressId { get; set; }
 
         public int Year { get; set; }
 

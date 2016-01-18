@@ -30,8 +30,8 @@ namespace MeetSport.Frontend
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css",
-                      "~/Content/toastr.min.css"));
+                      "~/Content/toastr.min.css",
+                      "~/Content/business-casual.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/knockout")
                 .Include("~/Scripts/knockout-{version}.js")
@@ -44,6 +44,7 @@ namespace MeetSport.Frontend
                 .IncludeDirectory("~/app/Services/", "*.js", false)
                 .Include("~/app/Components/ComponentsConfig.js")
                 .Include("~/Scripts/GoldenEye/GoldenEye.js")
+                .Include("~/Scripts/GoogleMaps.js")
                 .Include("~/app/RoutesConfig.js"));
 
             

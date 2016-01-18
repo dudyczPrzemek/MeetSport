@@ -2,6 +2,7 @@ using System.Web.Mvc;
 
 namespace MeetSport.Frontend.Controllers
 {
+    //AIzaSyDWSMzinWo4aESaBUB-3ORnOIgBaQpvCl0 
     [Authorize]
     public class HomeController : Controller
     {

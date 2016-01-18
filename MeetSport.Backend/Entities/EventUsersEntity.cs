@@ -10,8 +10,9 @@ namespace MeetSport.Backend.Entities
 {
     public class EventUsersEntity: EntityBase
     {
-        public User PlayerId { get; set; }
+        public string UserName { get; set; }
 
-        public EventEntity EventId { get; set; }
+        public EventEntity Event { get; set; }
+        public int EventId { get; set; }
     }
 }

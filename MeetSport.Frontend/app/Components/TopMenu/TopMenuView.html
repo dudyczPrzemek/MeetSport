@@ -1,4 +1,10 @@
-﻿<ul class="nav navbar-nav" data-bind="foreach: viewModels">
+﻿<ul class="nav navbar-nav" data-bind="foreach: viewModelsLogged, visible: loggedIn">
+    <li>
+        <a data-bind="text: $data, attr:{href:'#' + $data}"></a>
+    </li>
+</ul>
+
+<ul class="nav navbar-nav" data-bind="foreach: viewModelsNotLogged, ifnot: loggedIn">
     <li>
         <a data-bind="text: $data, attr:{href:'#' + $data}"></a>
     </li>

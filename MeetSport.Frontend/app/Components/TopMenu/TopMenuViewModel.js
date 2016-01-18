@@ -1,6 +1,10 @@
 ﻿function TopMenuViewModel() {
     var self = this;
 
-    self.viewModels = ko.observableArray(["Zlecenia", "Dodaj", "WynikiNaZywo", "EventMaking"]);
+    self.viewModelsLogged = ko.observableArray(["Aktualnosci", "EventMaking", "EventSearching"]);
+
+    self.viewModelsNotLogged = ko.observableArray([]);
+
+    self.loggedIn = ko.computed(authManager.isLogged);
 }
 

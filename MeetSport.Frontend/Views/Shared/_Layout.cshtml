@@ -17,8 +17,12 @@
 </head>
 
 <body>
+
+    <div class="brand">Meet Sport</div>
+    <div class="address-bar">Aplikacja pozwlająca na uprawianie sportu kiedy masz tylko ochotę</div>
+
     <div id="viewContainer">
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -35,12 +39,12 @@
                     <!-- /ko -->
                 </div>
             </div>
-        </div>
+        </nav>
         <div class="container body-content">
             @RenderBody()
             <hr />
             <footer>
-                <p>&copy; @DateTime.Now.Year - Author</p>
+                <p>&copy; @DateTime.Now.Year - Dudycz Przemysław</p>
             </footer>
         </div>
     </div>

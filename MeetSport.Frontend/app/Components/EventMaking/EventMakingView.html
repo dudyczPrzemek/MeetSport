@@ -1,5 +1,87 @@
-﻿<div>
-    <select data-bind="foreach: sports">
-        <option data-bind="text: Name"></option>
-    </select>
+﻿<style>
+    div.box > div {
+        padding-bottom: 1.4rem;
+    }
+    #descriptionEventMaking {
+        width: 100rem;
+        height: 35rem;
+        resize: none;
+    }
+    button {
+        padding: 1rem;
+        margin-left: 48%;
+    }
+    select {
+        padding-top 1rem;
+        padding-bottom: 1rem;
+    }
+    h3{
+        padding-bottom: 1.5rem;
+    }
+</style>
+
+<div class="row">
+    <div class="box">
+        <h3>Informacje o wydarzeniu</h3>
+        <div class="col-lg-12">
+            <div class="input-group">
+                <div class="input-group-addon" style="padding-right:6.2rem;">Dyscyplina</div>
+                <select id="dyscyplina" data-bind="options: sports, optionsText: 'Name', value: Sport" style="width: 17rem;"></select>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="input-group">
+                <div class="input-group-addon" style="padding-right:10rem;">Data</div>
+                <input id="date" type="date" data-bind="value: Date" style="width: 17rem;" />
+            </div>
+        </div>
+
+            <div class="col-lg-12">
+                <div class="input-group">
+                    <div class="input-group-addon" style="padding-right:6.9rem;">Ile graczy</div>
+                    <input id="playersNeeded" type="text" data-bind="value: PlayersNeeded" style="width: 17rem;" />
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="input-group">
+                    <div class="input-group-addon" style="padding-right:9.5rem;">Koszt</div>
+                    <input id="cost" type="text" data-bind="value: Cost" style="width: 17rem;" />
+                </div>
+            </div>
+        <div class="col-lg-12">
+                <div class="input-group">
+                    <div class="input-group-addon" style="padding-right:1.5rem;">Godzina rozpoczęcia</div>
+                    <input id="startTime" type="time" data-bind="value: StartTime" />
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-addon">Godzina zakończenia</div>
+                    <input id="endTime" type="time" data-bind="value: EndTime" />
+                </div>
+        </div>
+
+            <div class="col-lg-12">
+                <div class="input-group">
+                    <div class="input-group-addon">Miasto</div>
+                    <input id="city" type="text" data-bind="value: Address().City" />
+                </div>
+            </div>
+        <div class="col-lg-12">
+            <div class="input-group">
+                <div class="input-group-addon" style="padding-right:2.3rem;">Ulica</div>
+                <input id="street" type="text" data-bind="value: Address().Street" />
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="input-group">
+                <div class="input-group-addon">Opis</div>
+                <textarea id="descriptionEventMaking" type="text" data-bind="value: EventDescription"> </textarea>
+            </div>
+        </div>
+
+        <button data-bind="click: addEvent">Zapisz</button>
+    </div>
 </div>
