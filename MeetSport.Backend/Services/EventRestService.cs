@@ -7,21 +7,22 @@ using MeetSport.Shared.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MeetSport.Backend.Services
 {
     public class EventRestService : RestServiceBase<EventDTO, EventEntity>, IEventRestService
     {
-        IEventRepository _repo { get; set; }
+        private IEventRepository Repo
+        {
+            get { return (IEventRepository)Repository; }
+        }
 
         IAddressRepository _addressRepo { get; set; }
 
         public EventRestService(IEventRepository repository, IAddressRepository adressRepo)
             : base(repository)
         {
-            _repo = repository;
             _addressRepo = adressRepo;
         }
 
@@ -46,7 +47,7 @@ namespace MeetSport.Backend.Services
 
         public IList<EventDTO> GetNewEvents(string cityName, string userName)
         {
-            var entityList = _repo.GetNewEvents(cityName, userName);
+            var entityList = Repo.GetNewEvents(cityName, userName);
 
             var result = Mapper.Map<IList<EventEntity>, IList<EventDTO>>(entityList);
             foreach (var entity in entityList)
@@ -63,7 +64,7 @@ namespace MeetSport.Backend.Services
 
         public IList<EventDTO> GetFilteredEvents(string cityName, string sportName, DateTime date)
         {
-            var entityList = _repo.GetFilteredEvents(cityName, sportName, date);
+            var entityList = Repo.GetFilteredEvents(cityName, sportName, date);
 
             var result = Mapper.Map<IList<EventEntity>, IList<EventDTO>>(entityList);
             foreach (var entity in entityList)

@@ -2,11 +2,6 @@
 using MeetSport.Backend.Context;
 using MeetSport.Backend.Entities;
 using MeetSport.Backend.Repository.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MeetSport.Backend.Repository
 {
@@ -15,13 +10,6 @@ namespace MeetSport.Backend.Repository
         public SportsRepository(ISampleContext context) 
             : base(context, context.Sports)
         {
-        }
-
-        public IQueryable<SportEntity> GetAll() 
-        {
-            var result = DbSet.AsQueryable();
-
-            return result;
         }
     }
 }
