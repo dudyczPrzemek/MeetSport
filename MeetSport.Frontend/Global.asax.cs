@@ -1,3 +1,4 @@
+using System;
 using System.Web.Optimization;
 using GoldenEye.Frontend.Core.Web;
 
@@ -9,6 +10,11 @@ namespace MeetSport.Frontend
         {
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             base.OnBundleConfig();
+        }
+
+        protected override void OnUnandledExceptionCaught(Exception exception)
+        {
+            base.OnUnandledExceptionCaught(exception);
         }
     }
 }
