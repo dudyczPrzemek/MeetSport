@@ -51,7 +51,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
@@ -59,35 +59,35 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FluentValidation, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentValidation.6.0.0.0\lib\Net45\FluentValidation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Backend.Core, Version=1.2.19.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Backend.Core.1.2.19\lib\net45\GoldenEye.Backend.Core.dll</HintPath>
+    <Reference Include="GoldenEye.Backend.Core, Version=1.2.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Backend.Core.1.2.25\lib\net45\GoldenEye.Backend.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Backend.Security, Version=1.2.22.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Backend.Security.1.2.22\lib\net45\GoldenEye.Backend.Security.dll</HintPath>
+    <Reference Include="GoldenEye.Backend.Security, Version=1.2.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Backend.Security.1.2.25\lib\net45\GoldenEye.Backend.Security.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Frontend.Core.Web, Version=1.2.22.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Frontend.Core.Web.1.2.22\lib\net45\GoldenEye.Frontend.Core.Web.dll</HintPath>
+    <Reference Include="GoldenEye.Frontend.Core.Web, Version=1.2.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Frontend.Core.Web.1.2.25\lib\net45\GoldenEye.Frontend.Core.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Frontend.Security.Web, Version=1.2.22.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Frontend.Security.Web.1.2.22\lib\net45\GoldenEye.Frontend.Security.Web.dll</HintPath>
+    <Reference Include="GoldenEye.Frontend.Security.Web, Version=1.2.26.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Frontend.Security.Web.1.2.26\lib\net45\GoldenEye.Frontend.Security.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Frontend.SPA.Web, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Frontend.SPA.Web.1.2.10\lib\net45\GoldenEye.Frontend.SPA.Web.dll</HintPath>
+    <Reference Include="GoldenEye.Frontend.SPA.Web, Version=1.2.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Frontend.SPA.Web.1.2.25\lib\net45\GoldenEye.Frontend.SPA.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Shared.Core, Version=1.2.19.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Shared.Core.1.2.19\lib\net45\GoldenEye.Shared.Core.dll</HintPath>
+    <Reference Include="GoldenEye.Shared.Core, Version=1.2.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Shared.Core.1.2.25\lib\net45\GoldenEye.Shared.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -295,7 +295,6 @@
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -306,6 +305,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\GoldenEye\GoldenEye.min.js" />
     <Content Include="Scripts\jaydata\jaydata.js" />
     <Content Include="Scripts\jaydata\jaydata.min.js" />
     <Content Include="Scripts\jaydata\jaydatamodules\angular.js" />
@@ -373,7 +374,6 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\GoldenEye\GoldenEye.js" />
-    <Content Include="Scripts\GoldenEye\GoldenEye.min.js" />
     <Content Include="Scripts\GoogleMaps.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -401,12 +401,19 @@
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Scripts\knockout.validation.min.js.map" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -423,19 +430,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
