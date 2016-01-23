@@ -5,7 +5,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace MeetSport.Backend.Context
 {
-    public class SampleContext: DataContext<SampleContext>, ISampleContext
+    public class SampleContext : DataContext<SampleContext>, ISampleContext
     {
         public SampleContext()
             : base("name=DBConnectionString")
@@ -15,6 +15,7 @@ namespace MeetSport.Backend.Context
         public SampleContext(IConnectionProvider connectionProvider)
             : base(connectionProvider)
         {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SampleContext>());
         }
 
         public IDbSet<TaskEntity> Tasks { get; set; }
@@ -61,10 +62,6 @@ namespace MeetSport.Backend.Context
             modelBuilder.Entity<EventUsersEntity>()
                 .ToTable("EventUsers")
                 .HasKey(o => o.Id);
-
-            modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
-            modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
-            modelBuilder.Entity<IdentityUserRole>().HasKey(r => new { r.RoleId, r.UserId });
         }
     }
 }

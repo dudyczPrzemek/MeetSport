@@ -1,6 +1,8 @@
 ﻿function EventService() {
     var self = this;
 
+
+
     self.addEvent = function (model, callback) {
 
         $.ajax("/api/Event", {
@@ -17,8 +19,7 @@
         });
     }
 
-    self.getNewEvents = function (cityName, list)
-    {
+    self.getNewEvents = function (cityName, list){
         $.ajax("/api/Event", {
             dataType: "json",
             type: "GET",
@@ -45,8 +46,7 @@
         });
     }
 
-    self.search = function(sport, city, date)
-    {
+    self.search = function(sport, city, date){
         debugger;
         $.ajax("/api/Event", {
             dataType: "json",
