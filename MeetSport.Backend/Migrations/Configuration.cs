@@ -9,7 +9,7 @@ namespace MeetSport.Backend.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "MeetSport.Backend.Context.SampleContext";
         }
 

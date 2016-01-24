@@ -1,20 +1,20 @@
 using System.Data.Entity;
 using GoldenEye.Backend.Core.Context;
+using GoldenEye.Backend.Security.DataContext;
 using MeetSport.Backend.Entities;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace MeetSport.Backend.Context
 {
-    public class SampleContext: DataContext<SampleContext>, ISampleContext
+    public class SampleContext : UserDataContext, ISampleContext
     {
         public SampleContext()
-            : base("name=DBConnectionString")
         {
         }
 
         public SampleContext(IConnectionProvider connectionProvider)
             : base(connectionProvider)
         {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<SampleContext>());
         }
 
         public IDbSet<TaskEntity> Tasks { get; set; }
@@ -36,6 +36,7 @@ namespace MeetSport.Backend.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<TaskEntity>()
                 .ToTable("Tasks")
                 .HasKey(o => o.Id);
@@ -67,10 +68,6 @@ namespace MeetSport.Backend.Context
             modelBuilder.Entity<TransmissionEntity>()
                 .ToTable("Transmissions")
                 .HasKey(o => o.Id);
-
-            modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
-            modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
-            modelBuilder.Entity<IdentityUserRole>().HasKey(r => new { r.RoleId, r.UserId });
         }
     }
 }

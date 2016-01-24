@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using GoldenEye.Frontend.Core.Web.Controllers;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
+﻿using GoldenEye.Frontend.Core.Web.Controllers;
 using MeetSport.Shared.Services;
 using MeetSport.Shared.DTOs;
-using System.Web.Mvc;
 
 namespace MeetSport.Frontend.Controllers
 {
@@ -18,13 +12,6 @@ namespace MeetSport.Frontend.Controllers
         public SportsController(ISportsRestService service)
             : base(service)
         { 
-        }
-
-        public override IQueryable<SportsDTO> Get()
-        {
-            var result = Service.Get();
-
-            return result.AsQueryable();
         }
     }
 }

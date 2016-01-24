@@ -5,8 +5,6 @@ using MeetSport.Backend.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MeetSport.Backend.Repository
 {
@@ -15,13 +13,6 @@ namespace MeetSport.Backend.Repository
         public EventRepository(ISampleContext context)
             : base(context, context.Event)
         {
-        }
-
-        public override EventEntity Add(EventEntity entity)
-        {
-            var result = DbSet.Add(entity);
-            Context.SaveChanges();
-            return result;
         }
 
         public IList<EventEntity> GetNewEvents(string cityName, string userName)
