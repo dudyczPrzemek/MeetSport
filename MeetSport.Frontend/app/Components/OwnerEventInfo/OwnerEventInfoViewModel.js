@@ -1,10 +1,9 @@
-﻿function EventInfoViewModel() {
+﻿function OwnerEventInfoViewModel() {
     var self = this;
 
     self.Event = ko.observableArray();
 
-    self.init = function (id)
-    {
+    self.init = function (id) {
         eventService.getEvent(self.Event, id);
     }
 }

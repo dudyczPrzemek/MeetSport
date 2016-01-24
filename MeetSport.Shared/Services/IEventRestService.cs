@@ -10,8 +10,12 @@ namespace MeetSport.Shared.Services
 {
     public interface IEventRestService : IRestService<EventDTO>
     {
+        IList<EventDTO> GetById(int id);
+
+        IList<EventDTO> GetForUser(string userName);
+
         IList<EventDTO> GetNewEvents(string cityName, string userName);
 
-        IList<EventDTO> GetFilteredEvents(string cityName, string sportName, DateTime date);
+        IList<EventDTO> GetFilteredEvents(string cityName, string sportName, DateTime date, string userName);
     }
 }

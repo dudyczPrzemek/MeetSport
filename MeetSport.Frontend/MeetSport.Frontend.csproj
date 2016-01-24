@@ -251,15 +251,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\Components\About\AboutView.html" />
-    <Content Include="app\Components\About\AboutViewModel.js" />
     <Content Include="app\Components\AddTask\AddTaskView.html" />
     <Content Include="app\Components\AddTask\AddTaskViewModel.js" />
     <Content Include="app\Components\Aktualnosci\AktualnosciView.html" />
     <Content Include="app\Components\Aktualnosci\AktualnosciViewModel.js" />
     <Content Include="app\Components\ComponentsConfig.js" />
-    <Content Include="app\Components\Contact\ContactView.html" />
-    <Content Include="app\Components\Contact\ContactViewModel.js" />
     <Content Include="app\Components\EventInfo\EventInfoView.html" />
     <Content Include="app\Components\EventInfo\EventInfoViewModel.js" />
     <Content Include="app\Components\EventMaking\EventMakingView.html" />
@@ -268,23 +264,30 @@
     <Content Include="app\Components\EventSearching\EventSearchingViewModel.js" />
     <Content Include="app\Components\Greetings\GreetingsView.html" />
     <Content Include="app\Components\Greetings\GreetingsViewModel.js" />
-    <Content Include="app\Components\LiveScore\LiveScoreView.html" />
-    <Content Include="app\Components\LiveScore\LiveScoreViewModel.js" />
+    <Content Include="app\Components\LiveEvents\LiveEventsView.html" />
+    <Content Include="app\Components\LiveEvents\LiveEventsViewModel.js" />
     <Content Include="app\Components\Login\LoginTopMenuView.html" />
     <Content Include="app\Components\Login\LoginView.html" />
     <Content Include="app\Components\Login\LoginViewModel.js" />
     <Content Include="app\Components\Main\MainView.html" />
     <Content Include="app\Components\Main\MainViewModel.js" />
+    <Content Include="app\Components\OwnerEventInfo\OwnerEventInfoView.html" />
+    <Content Include="app\Components\OwnerEventInfo\OwnerEventInfoViewModel.js" />
     <Content Include="app\Components\TaskDetail\TaskDetailView.html" />
     <Content Include="app\Components\TaskDetail\TaskDetailViewModel.js" />
     <Content Include="app\Components\TaskList\TaskListView.html" />
     <Content Include="app\Components\TaskList\TaskListViewModel.js" />
     <Content Include="app\Components\TopMenu\TopMenuView.html" />
     <Content Include="app\Components\TopMenu\TopMenuViewModel.js" />
+    <Content Include="app\Components\Transmission\TransmissionView.html" />
+    <Content Include="app\Components\Transmission\TransmissionViewModel.js" />
+    <Content Include="app\Components\YourEvents\YourEventsView.html" />
+    <Content Include="app\Components\YourEvents\YourEventsViewModel.js" />
     <Content Include="app\RoutesConfig.js" />
     <Content Include="app\Services\EventService.js" />
     <Content Include="app\Services\SportsService.js" />
     <Content Include="app\Services\TasksService.js" />
+    <Content Include="app\Services\TransmissionService.js" />
     <Content Include="app\Services\UserService.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -422,6 +425,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SportsController.cs" />
     <Compile Include="Controllers\TaskController.cs" />
+    <Compile Include="Controllers\TransmissionController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

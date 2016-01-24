@@ -1,11 +1,28 @@
-﻿<ul class="nav navbar-nav" data-bind="foreach: viewModelsLogged, visible: loggedIn">
+﻿<!--<ul class="nav navbar-nav" data-bind="foreach: viewModelsLogged, visible: loggedIn">
     <li>
-        <a data-bind="text: $data, attr:{href:'#' + $data}"></a>
+        <a data-bind="text: $data.desc, attr:{href:'#' + $data.compName}"></a>
     </li>
 </ul>
 
 <ul class="nav navbar-nav" data-bind="foreach: viewModelsNotLogged, visible: !loggedIn()">
     <li>
         <a data-bind="text: $data, attr:{href:'#' + $data}"></a>
+    </li>
+</ul>-->
+<ul class="nav navbar-nav" data-bind="visible: loggedIn">
+    <li>
+        <a href="#Aktualnosci">Aktualności</a>
+    </li>
+    <li>
+        <a href="#YourEvents">Twoje wydarzenia</a>
+    </li>
+    <li>
+        <a href="#EventSearching">Wyszukaj</a>
+    </li>
+    <li>
+        <a href="#LiveEvents">Transmisje</a>
+    </li>
+    <li>
+        <a data-bind="click: logout">Wyloguj</a>
     </li>
 </ul>

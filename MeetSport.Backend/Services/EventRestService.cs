@@ -62,9 +62,45 @@ namespace MeetSport.Backend.Services
             return result;
         }
 
-        public IList<EventDTO> GetFilteredEvents(string cityName, string sportName, DateTime date)
+        public IList<EventDTO> GetFilteredEvents(string cityName, string sportName, DateTime date, string userName)
         {
-            var entityList = Repo.GetFilteredEvents(cityName, sportName, date);
+            var entityList = Repo.GetFilteredEvents(cityName, sportName, date, userName);
+
+            var result = Mapper.Map<IList<EventEntity>, IList<EventDTO>>(entityList);
+            foreach (var entity in entityList)
+            {
+                var eventTemp = result.FirstOrDefault(val => val.Id == entity.Id);
+
+                eventTemp.Date = new DateTime(entity.Year, entity.Month, entity.Day);
+                eventTemp.Sport = Mapper.Map<SportEntity, SportsDTO>(entity.Sport);
+                eventTemp.Address = Mapper.Map<AddressEntity, AddressDTO>(entity.Address);
+            }
+
+            return result;
+        }
+
+        public IList<EventDTO> GetById(int id) {
+            var entityBase = Repo.GetById(id);
+            var entityList = new List<EventEntity>();
+
+            entityList.Add(entityBase);
+
+            var result = Mapper.Map<IList<EventEntity>, IList<EventDTO>>(entityList);
+            foreach (var entity in entityList)
+            {
+                var eventTemp = result.FirstOrDefault(val => val.Id == entity.Id);
+
+                eventTemp.Date = new DateTime(entity.Year, entity.Month, entity.Day);
+                eventTemp.Sport = Mapper.Map<SportEntity, SportsDTO>(entity.Sport);
+                eventTemp.Address = Mapper.Map<AddressEntity, AddressDTO>(entity.Address);
+            }
+
+            return result;
+        }
+
+        public IList<EventDTO> GetForUser(string userName)
+        {
+            var entityList = Repo.GetForUser(userName);
 
             var result = Mapper.Map<IList<EventEntity>, IList<EventDTO>>(entityList);
             foreach (var entity in entityList)

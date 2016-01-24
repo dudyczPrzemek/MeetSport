@@ -104,6 +104,7 @@
     <Compile Include="Entities\RatingEntity.cs" />
     <Compile Include="Entities\SportEntity.cs" />
     <Compile Include="Entities\TaskEntity.cs" />
+    <Compile Include="Entities\TransmissionEntity.cs" />
     <Compile Include="Entities\UsersFriendEntity.cs" />
     <Compile Include="Mappings\MappingDefinition.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -115,11 +116,14 @@
     <Compile Include="Repository\Interfaces\IEventRepository.cs" />
     <Compile Include="Repository\Interfaces\ISportsRepository.cs" />
     <Compile Include="Repository\Interfaces\ITaskRepository.cs" />
+    <Compile Include="Repository\Interfaces\ITransmissionRepository.cs" />
     <Compile Include="Repository\SportsRepository.cs" />
     <Compile Include="Repository\TaskRepository.cs" />
+    <Compile Include="Repository\TransmissionRepository.cs" />
     <Compile Include="Services\EventRestService.cs" />
     <Compile Include="Services\SportsRestService.cs" />
     <Compile Include="Services\TaskRestService.cs" />
+    <Compile Include="Services\TransmissionRestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MeetSport.Shared\MeetSport.Shared.csproj">

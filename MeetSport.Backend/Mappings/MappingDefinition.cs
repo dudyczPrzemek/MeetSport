@@ -36,6 +36,11 @@ namespace MeetSport.Backend.Mappings
 
             Mapper.CreateMap<SportEntity, SportsDTO>()
                 .IgnoreNonExistingProperties();
+
+            Mapper.CreateMap<TransmissionDTO, TransmissionEntity>()
+                .IgnoreNonExistingProperties();
+            Mapper.CreateMap<TransmissionEntity, TransmissionDTO>()
+                .IgnoreNonExistingProperties();
         }
     }
 }

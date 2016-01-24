@@ -15,7 +15,7 @@
 
                 </thead>
                 <tbody data-bind="foreach: NewEvents">
-                    <tr class="active">
+                    <tr class="active" data-bind="click: $parent.goToEventInfo">
                         <td data-bind="text: Sport.Name"></td>
                         <td data-bind="text: FounderName"></td>
                         <td data-bind="text: PlayersNeeded"></td>

@@ -1,0 +1,18 @@
+﻿<style>
+    span {
+        padding-top:2rem;
+        font-size: large;
+        font-weight: bold;
+    }
+    div#video {
+        padding:2rem;
+    }
+</style>
+<div class="row">
+    <div class="box">
+        <span data-bind="text: userDesc"></span>
+        <div id="video">
+            <iframe width="640" height="360" frameborder="0" allowfullscreen data-bind="attr:{src: Transmission().Url}"></iframe>
+        </div>
+    </div>
+</div>

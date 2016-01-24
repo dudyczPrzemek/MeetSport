@@ -20,13 +20,18 @@ namespace MeetSport.Backend.Repository
             var currentDate = DateTime.Now;
 
             return DbSet.Where(val => val.Year == currentDate.Year && val.Month == currentDate.Month
-                && val.Day <= currentDate.Day + 2 && val.Address.City == cityName && val.FounderName != userName).ToList();
+                && val.Day <= currentDate.Day + 2 &&val.Day >= currentDate.Day-2 && val.Address.City == cityName && val.FounderName != userName).ToList();
         }
 
-        public IList<EventEntity> GetFilteredEvents(string cityName, string sportName, DateTime date)
+        public IList<EventEntity> GetFilteredEvents(string cityName, string sportName, DateTime date, string userName)
         {
             return DbSet.Where(val => val.Address.City == cityName && val.Sport.Name == sportName && val.Year == date.Year
-                && val.Month == date.Month && val.Day == date.Day).ToList();
+                && val.Month == date.Month && val.Day == date.Day && val.FounderName != userName).ToList();
+        }
+
+        public IList<EventEntity> GetForUser(string userName)
+        {
+            return DbSet.Where(val => val.FounderName == userName).ToList();
         }
     }
 }

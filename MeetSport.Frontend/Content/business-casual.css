@@ -47,6 +47,10 @@ hr {
     letter-spacing: 3px;
 }
 
+.navbar-nav a{
+    cursor: pointer;
+}
+
 .img-full {
     min-width: 100%;
 }
