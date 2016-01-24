@@ -13,6 +13,9 @@
             },
             success: function (data) {
                 callback(model);
+            },
+            error: function () {
+                callback();
             }
         });
     }
@@ -45,9 +48,8 @@
         });
     }
 
-    self.search = function(sport, city, date)
+    self.search = function(list, sport, city, date)
     {
-        debugger;
         $.ajax("/api/Event", {
             dataType: "json",
             type: "GET",
@@ -57,7 +59,83 @@
                 'Authorization': "Bearer " + authManager.getToken()
             },
             success: function (data) {
-                callback(data);
+                var result = ko.mapping.fromJS(data);
+
+                for (var i = 0; i < result().length; ++i) {
+                    result()[i].Date(result()[i].Date().slice(0, 10));
+                    result()[i].StartTime(result()[i].StartTime().slice(11, 16));
+                    result()[i].EndTime(result()[i].EndTime().slice(11, 16));
+                    var time = result()[i].StartTime().slice(11, 16).toString() + "-" + result()[i].EndTime().slice(11, 16).toString();
+
+                    result()[i].Time = ko.observable(time);
+                }
+
+                list(result());
+            }
+        });
+    }
+
+    self.getEventsOfLoggedUser = function (list) {
+        $.ajax("/api/Event", {
+            dataType: "json",
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            headers: {
+                'Authorization': "Bearer " + authManager.getToken()
+            },
+            success: function (data) {
+
+            }
+        });
+    }
+
+    self.getEvent = function (model, id) {
+        $.ajax("/api/Event", {
+            dataType: "json",
+            type: "GET",
+            data:{Id: id, myMethod: true},
+            contentType: "application/json; charset=utf-8",
+            headers: {
+                'Authorization': "Bearer " + authManager.getToken()
+            },
+            success: function (data) {
+                var result = ko.mapping.fromJS(data);
+                for (var i = 0; i < result().length; ++i) {
+                    result()[i].Date(result()[i].Date().slice(0, 10));
+                    result()[i].StartTime(result()[i].StartTime().slice(11, 16));
+                    result()[i].EndTime(result()[i].EndTime().slice(11, 16));
+                    var time = result()[i].StartTime().slice(11, 16).toString() + "-" + result()[i].EndTime().slice(11, 16).toString();
+
+                    result()[i].Time = ko.observable(time);
+                }
+
+                model(result());
+            }
+        });
+    }
+
+    self.getEventsForUser = function(list, userName){
+
+        $.ajax("/api/Event", {
+            dataType: "json",
+            type: "GET",
+            data:{userName: userName, myMethod: true},
+            contentType: "application/json; charset=utf-8",
+            headers: {
+                'Authorization': "Bearer " + authManager.getToken()
+            },
+            success: function (data) {
+                var result = ko.mapping.fromJS(data);
+                for (var i = 0; i < result().length; ++i) {
+                    result()[i].Date(result()[i].Date().slice(0, 10));
+                    result()[i].StartTime(result()[i].StartTime().slice(11, 16));
+                    result()[i].EndTime(result()[i].EndTime().slice(11, 16));
+                    var time = result()[i].StartTime().slice(11, 16).toString() + "-" + result()[i].EndTime().slice(11, 16).toString();
+
+                    result()[i].Time = ko.observable(time);
+                }
+
+                list(result());
             }
         });
     }

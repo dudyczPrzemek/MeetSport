@@ -7,6 +7,7 @@
     self.selectedSport = ko.observable();
     self.selectedCity = ko.observable();
 
+    self.searchedEvents = ko.observableArray();
 
     self.init = function ()
     {
@@ -14,6 +15,10 @@
     }
 
     self.search = function () {
-        eventService.search(self.selectedSport, self.selectedCity, self.date);
+        eventService.search(self.searchedEvents, self.selectedSport, self.selectedCity, self.date);
+    }
+
+    self.goToEventInfo = function (model) {
+        window.location = "#EventInfo/" + model.Id();
     }
 }

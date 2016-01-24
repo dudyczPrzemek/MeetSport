@@ -31,6 +31,8 @@ namespace MeetSport.Backend.Context
 
         public IDbSet<EventUsersEntity> EventUsers { get; set; }
 
+        public IDbSet<TransmissionEntity> Transmissions { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -60,6 +62,10 @@ namespace MeetSport.Backend.Context
 
             modelBuilder.Entity<EventUsersEntity>()
                 .ToTable("EventUsers")
+                .HasKey(o => o.Id);
+
+            modelBuilder.Entity<TransmissionEntity>()
+                .ToTable("Transmissions")
                 .HasKey(o => o.Id);
 
             modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);

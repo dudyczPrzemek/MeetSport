@@ -104,6 +104,7 @@
     <Compile Include="Entities\RatingEntity.cs" />
     <Compile Include="Entities\SportEntity.cs" />
     <Compile Include="Entities\TaskEntity.cs" />
+    <Compile Include="Entities\TransmissionEntity.cs" />
     <Compile Include="Entities\UsersFriendEntity.cs" />
     <Compile Include="Mappings\MappingDefinition.cs" />
     <Compile Include="Migrations\201512291944107_InitialCreate.cs" />
@@ -126,6 +127,14 @@
     <Compile Include="Migrations\201601130017565_zamieszanieZUzytkownikami.Designer.cs">
       <DependentUpon>201601130017565_zamieszanieZUzytkownikami.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601220104154_Adding transmission.cs" />
+    <Compile Include="Migrations\201601220104154_Adding transmission.Designer.cs">
+      <DependentUpon>201601220104154_Adding transmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601220132154_transmission details.cs" />
+    <Compile Include="Migrations\201601220132154_transmission details.Designer.cs">
+      <DependentUpon>201601220132154_transmission details.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -135,11 +144,14 @@
     <Compile Include="Repository\Interfaces\IEventRepository.cs" />
     <Compile Include="Repository\Interfaces\ISportsRepository.cs" />
     <Compile Include="Repository\Interfaces\ITaskRepository.cs" />
+    <Compile Include="Repository\Interfaces\ITransmissionRepository.cs" />
     <Compile Include="Repository\SportsRepository.cs" />
     <Compile Include="Repository\TaskRepository.cs" />
+    <Compile Include="Repository\TransmissionRepository.cs" />
     <Compile Include="Services\EventRestService.cs" />
     <Compile Include="Services\SportsRestService.cs" />
     <Compile Include="Services\TaskRestService.cs" />
+    <Compile Include="Services\TransmissionRestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MeetSport.Shared\MeetSport.Shared.csproj">
@@ -166,6 +178,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601130017565_zamieszanieZUzytkownikami.resx">
       <DependentUpon>201601130017565_zamieszanieZUzytkownikami.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601220104154_Adding transmission.resx">
+      <DependentUpon>201601220104154_Adding transmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601220132154_transmission details.resx">
+      <DependentUpon>201601220132154_transmission details.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

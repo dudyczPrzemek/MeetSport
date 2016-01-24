@@ -19,5 +19,7 @@ namespace MeetSport.Backend.Context
         IDbSet<UsersFriendEntity> UserFriends { get; }
 
         IDbSet<EventUsersEntity> EventUsers { get; }
+
+        IDbSet<TransmissionEntity> Transmissions { get; }
     }
 }

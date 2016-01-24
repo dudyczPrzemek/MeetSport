@@ -44,8 +44,25 @@ namespace MeetSport.Frontend.Controllers
 
         public IQueryable<EventDTO> Get(string sportName, string cityName, DateTime date)
         {
-            var result = Service.GetFilteredEvents(cityName, sportName, date);
+            var userName = User.Identity.Name;
+
+            var result = Service.GetFilteredEvents(cityName, sportName, date, userName);
             return result.AsQueryable();
         }
+
+        public IQueryable<EventDTO> Get(int id, bool myMethod)
+        {
+            var result = Service.GetById(id);
+
+            return result.AsQueryable();
+        }
+
+        public IQueryable<EventDTO> Get(string userName, bool myMethod)
+        {
+            var result = Service.GetForUser(userName);
+
+            return result.AsQueryable();
+        }
+
     }
 }

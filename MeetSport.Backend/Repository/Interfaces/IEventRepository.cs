@@ -12,6 +12,8 @@ namespace MeetSport.Backend.Repository.Interfaces
     {
         IList<EventEntity> GetNewEvents(string cityName, string userName);
 
-        IList<EventEntity> GetFilteredEvents(string cityName, string sportName, DateTime date);
+        IList<EventEntity> GetFilteredEvents(string cityName, string sportName, DateTime date, string userName);
+
+        IList<EventEntity> GetForUser(string userName);
     }
 }

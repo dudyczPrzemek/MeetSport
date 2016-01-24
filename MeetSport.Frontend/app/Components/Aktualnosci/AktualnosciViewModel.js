@@ -20,4 +20,8 @@
     {
         eventService.getNewEvents(self.selectedCity(), self.NewEvents);
     }
+
+    self.goToEventInfo = function (model) {
+        window.location = "#EventInfo/" + model.Id();
+    }
 }
