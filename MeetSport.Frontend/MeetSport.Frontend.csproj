@@ -313,6 +313,15 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="img\bg.jpg" />
+    <Content Include="img\bg2.jpg" />
+    <Content Include="img\bg3.jpg" />
+    <Content Include="img\bg4.jpg" />
+    <Content Include="img\bg5.jpg" />
+    <Content Include="img\intro-pic.jpg" />
+    <Content Include="img\slide-1.jpg" />
+    <Content Include="img\slide-2.jpg" />
+    <Content Include="img\slide-3.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\GoldenEye\GoldenEye.js" />
