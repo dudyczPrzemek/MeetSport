@@ -1,14 +1,13 @@
 using System.Data.Entity;
 using GoldenEye.Backend.Core.Context;
+using GoldenEye.Backend.Security.DataContext;
 using MeetSport.Backend.Entities;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace MeetSport.Backend.Context
 {
-    public class SampleContext : DataContext<SampleContext>, ISampleContext
+    public class SampleContext : UserDataContext, ISampleContext
     {
         public SampleContext()
-            : base("name=DBConnectionString")
         {
         }
 
@@ -35,6 +34,7 @@ namespace MeetSport.Backend.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<TaskEntity>()
                 .ToTable("Tasks")
                 .HasKey(o => o.Id);
