@@ -1,0 +1,40 @@
+﻿
+<div class="row">
+    <div class="box">
+        <h4>Utwórz swoją transmisję!</h4>
+
+        <div class="col-lg-12">
+            <div class="input-group">
+                <div class="input-group-addon" style="padding-right:6.5rem;">Tytuł transmisji: </div>
+                <input id="url" type="text" data-bind="value: Title" />
+            </div>
+        </div>
+
+        <div class="col-lg-12" style="padding-bottom:1rem;padding-top:1rem;">
+            <div class="input-group">
+                <div class="input-group-addon" style="padding-right:5rem;">Link do transmisji: </div>
+                <input id="url" type="text" data-bind="value: Url" />
+            </div>
+        </div>
+
+        <button data-bind="click: addTransmission">Utwórz</button>
+    </div>
+
+    <div class="box">
+        <h4>Dostępne transmisje:</h4>
+
+        <table class="table table-hover">
+            <thead>
+            <th>Nazwa</th>
+            <th>Założyciel</th>
+
+            </thead>
+            <tbody data-bind="foreach: Transmissions">
+                <tr class="active" data-bind="click: $parent.goToTransDetails">
+                    <td data-bind="text: Title"></td>
+                    <td data-bind="text: OwnerName"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

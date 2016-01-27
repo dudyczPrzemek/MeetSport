@@ -16,11 +16,6 @@ namespace MeetSport.Backend.Mappings
                 .IgnoreNonExistingProperties();
             Mapper.CreateMap<TaskDTO, TaskEntity>()
                 .IgnoreNonExistingProperties();
-            Mapper.CreateMap<User, UserDTO>()
-                .ForMember(el=>el.Id, opt=>opt.MapFrom(o=>o.Id))
-                .IgnoreNonExistingProperties();
-            Mapper.CreateMap<UserDTO, User>()
-                .IgnoreNonExistingProperties();
             Mapper.CreateMap<SportEntity, SportsDTO>()
                 .IgnoreNonExistingProperties();
 

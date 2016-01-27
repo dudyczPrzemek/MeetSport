@@ -1,0 +1,28 @@
+﻿<div class="row">
+    <div class="box">
+        <table class="table table-hover">
+            <thead>
+            <th>Dyscyplina</th>
+            <th>Zalożyciel</th>
+            <th>Ile graczy</th>
+            <th>Koszt</th>
+            <th>Data</th>
+            <th>Godziny</th>
+
+            </thead>
+            <tbody data-bind="foreach: Events">
+                <tr class="active" data-bind="click: $parent.goToEventInfo">
+                    <td data-bind="text: Sport.Name"></td>
+                    <td data-bind="text: FounderName"></td>
+                    <td data-bind="text: PlayersNeeded"></td>
+                    <td data-bind="text: Cost"></td>
+                    <td data-bind="text: Date"></td>
+                    <td><span data-bind="text: StartTime"></span> - <span data-bind="text: EndTime"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="box" data-bind="component: {name: 'EventMaking-nc'}">
+    </div>
+</div>
