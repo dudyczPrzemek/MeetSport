@@ -284,7 +284,9 @@
     <Content Include="app\Components\YourEvents\YourEventsView.html" />
     <Content Include="app\Components\YourEvents\YourEventsViewModel.js" />
     <Content Include="app\RoutesConfig.js" />
+    <Content Include="app\Services\DataConfig.js" />
     <Content Include="app\Services\EventService.js" />
+    <Content Include="app\Services\API.js" />
     <Content Include="app\Services\SportsService.js" />
     <Content Include="app\Services\TasksService.js" />
     <Content Include="app\Services\TransmissionService.js" />
