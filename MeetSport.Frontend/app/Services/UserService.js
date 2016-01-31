@@ -16,20 +16,31 @@
         return false;
     }
 
+    var UserAPI = $data.define("User", {
+        Id: Number,
+        UserName: String,
+        FirstName: String,
+        LastName: String,
+        Email: String,
+    });
+
+    UserAPI.setStore('default', {
+        provider: 'webApi',
+        dataSource: '/api/user'
+    });
+
+    $data.EntityContext.prototype.prepareRequest = function (r) {
+        r.headers['Authorization'] = "Bearer " + authManager.getToken();
+    };
+    
     self.getUser = function (username, callback) {
-        $.ajax({
-            url: "/api/user?$filter=(UserName eq '" + username  + "')",
-            dataType: "json",
-            contentType: "application/json; charset=utf-8",
-            type: "GET",
-            headers: {
-                'Authorization': "Bearer " + authManager.getToken()
-            },
-            success: function(data) {
-                callback(data[0]);
-            },
-            error: handleStandardError
-        });
+        UserAPI.query(function (user) { return user.UserName === this.username; }, {username: username})
+            .then(function (items) {
+                callback(items[0]);
+            })
+            .fail(function (err) {
+                console.log("item not found");
+            });
     }
 };
 

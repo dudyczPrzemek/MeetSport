@@ -38,12 +38,12 @@
       <HintPath>..\packages\FluentValidation.6.0.0.0\lib\Net45\FluentValidation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Shared.Core, Version=1.2.28.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Shared.Core.1.2.28\lib\net45\GoldenEye.Shared.Core.dll</HintPath>
+    <Reference Include="GoldenEye.Shared.Core, Version=1.2.30.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Shared.Core.1.2.30\lib\net45\GoldenEye.Shared.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Shared.SPA, Version=1.2.28.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Shared.SPA.1.2.28\lib\net45\GoldenEye.Shared.SPA.dll</HintPath>
+    <Reference Include="GoldenEye.Shared.SPA, Version=1.2.30.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Shared.SPA.1.2.30\lib\net45\GoldenEye.Shared.SPA.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
