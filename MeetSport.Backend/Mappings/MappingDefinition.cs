@@ -24,6 +24,11 @@ namespace MeetSport.Backend.Mappings
             Mapper.CreateMap<EventDTO, EventEntity>()
                 .IgnoreNonExistingProperties();
 
+            Mapper.CreateMap<SportEntity, SportsDTO>()
+                .IgnoreNonExistingProperties();
+            Mapper.CreateMap<SportsDTO, SportEntity>()
+                .IgnoreNonExistingProperties();
+
             Mapper.CreateMap<AddressDTO, AddressEntity>()
                 .IgnoreNonExistingProperties();
             Mapper.CreateMap<AddressEntity, AddressDTO>()

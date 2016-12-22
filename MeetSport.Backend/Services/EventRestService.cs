@@ -39,10 +39,11 @@ namespace MeetSport.Backend.Services
             mappedEvent.Month = dto.Date.Month;
             mappedEvent.Year = dto.Date.Year;
 
-            Repository.Add(mappedEvent);
+            var result = Repository.Add(mappedEvent);
 
+            Repository.SaveChanges();
 
-            return null;
+            return  Task.Run(() => Mapper.Map<EventDTO>(result));
         }
 
         public IList<EventDTO> GetNewEvents(string cityName, string userName)
