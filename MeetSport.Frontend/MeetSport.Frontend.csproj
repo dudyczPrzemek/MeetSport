@@ -67,28 +67,28 @@
       <HintPath>..\packages\FluentValidation.6.0.0.0\lib\Net45\FluentValidation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Backend.Core, Version=1.2.26.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Backend.Core.1.2.26\lib\net45\GoldenEye.Backend.Core.dll</HintPath>
+    <Reference Include="GoldenEye.Backend.Core, Version=1.2.30.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Backend.Core.1.2.30\lib\net45\GoldenEye.Backend.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Backend.Security, Version=1.2.26.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Backend.Security.1.2.26\lib\net45\GoldenEye.Backend.Security.dll</HintPath>
+    <Reference Include="GoldenEye.Backend.Security, Version=1.2.30.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Backend.Security.1.2.30\lib\net45\GoldenEye.Backend.Security.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Frontend.Core.Web, Version=1.2.26.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Frontend.Core.Web.1.2.26\lib\net45\GoldenEye.Frontend.Core.Web.dll</HintPath>
+    <Reference Include="GoldenEye.Frontend.Core.Web, Version=1.2.30.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Frontend.Core.Web.1.2.30\lib\net45\GoldenEye.Frontend.Core.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Frontend.Security.Web, Version=1.2.26.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Frontend.Security.Web.1.2.26\lib\net45\GoldenEye.Frontend.Security.Web.dll</HintPath>
+    <Reference Include="GoldenEye.Frontend.Security.Web, Version=1.2.30.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Frontend.Security.Web.1.2.30\lib\net45\GoldenEye.Frontend.Security.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Frontend.SPA.Web, Version=1.2.26.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Frontend.SPA.Web.1.2.26\lib\net45\GoldenEye.Frontend.SPA.Web.dll</HintPath>
+    <Reference Include="GoldenEye.Frontend.SPA.Web, Version=1.2.30.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Frontend.SPA.Web.1.2.30\lib\net45\GoldenEye.Frontend.SPA.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GoldenEye.Shared.Core, Version=1.2.26.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\GoldenEye.Shared.Core.1.2.26\lib\net45\GoldenEye.Shared.Core.dll</HintPath>
+    <Reference Include="GoldenEye.Shared.Core, Version=1.2.30.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GoldenEye.Shared.Core.1.2.30\lib\net45\GoldenEye.Shared.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -285,7 +285,9 @@
     <Content Include="app\Components\YourEvents\YourEventsView.html" />
     <Content Include="app\Components\YourEvents\YourEventsViewModel.js" />
     <Content Include="app\RoutesConfig.js" />
+    <Content Include="app\Services\DataConfig.js" />
     <Content Include="app\Services\EventService.js" />
+    <Content Include="app\Services\API.js" />
     <Content Include="app\Services\SportsService.js" />
     <Content Include="app\Services\TasksService.js" />
     <Content Include="app\Services\TransmissionService.js" />

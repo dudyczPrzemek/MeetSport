@@ -76,20 +76,6 @@
         });
     }
 
-    self.getEventsOfLoggedUser = function (list) {
-        $.ajax("/api/Event", {
-            dataType: "json",
-            type: "GET",
-            contentType: "application/json; charset=utf-8",
-            headers: {
-                'Authorization': "Bearer " + authManager.getToken()
-            },
-            success: function (data) {
-
-            }
-        });
-    }
-
     self.getEvent = function (model, id) {
         $.ajax("/api/Event", {
             dataType: "json",

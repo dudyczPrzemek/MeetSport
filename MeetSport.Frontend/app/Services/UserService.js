@@ -1,34 +1,17 @@
 ﻿function UserService() {
-
     var self = this;
 
-    function handleLogOut() {
-        toastr.error("Zostałeś wylogowany!", "Błąd");
-        cache.ClearAll();
-        routing.refresh();
-    }
-
-    function handleStandardError(jqXHR, exception) {
-        if (jqXHR.status === 401) {
-            handleLogOut();
-            return true;
-        }
-        return false;
-    }
+    var api = new API("User", {
+        Id: Number,
+        UserName: String,
+        FirstName: String,
+        LastName: String,
+        Email: String,
+    });
 
     self.getUser = function (username, callback) {
-        $.ajax({
-            url: "/api/user?$filter=(UserName eq '" + username  + "')",
-            dataType: "json",
-            contentType: "application/json; charset=utf-8",
-            type: "GET",
-            headers: {
-                'Authorization': "Bearer " + authManager.getToken()
-            },
-            success: function(data) {
-                callback(data[0]);
-            },
-            error: handleStandardError
+        api.query(function(user) { return user.UserName === this.username; }, { username: username }, function(items) {
+            callback(items[0]);
         });
     }
 };

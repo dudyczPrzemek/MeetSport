@@ -41,9 +41,9 @@ namespace MeetSport.Frontend
                 .Include("~/Scripts/knockstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app")
-                .IncludeDirectory("~/app/Services/", "*.js", false)
                 .Include("~/Scripts/jaydata/jaydata.js")
                 .Include("~/Scripts/jaydata/jaydatamodules/knockout.js")
+                .IncludeDirectory("~/app/Services/", "*.js", false)
                 .Include("~/app/Components/ComponentsConfig.js")
                 .Include("~/Scripts/GoldenEye/GoldenEye.js")
                 .Include("~/Scripts/GoogleMaps.js")
